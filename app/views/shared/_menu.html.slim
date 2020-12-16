@@ -1,0 +1,8 @@
+.fixed.bottom-0.bg-black.h-16.w-full
+  ul.h-full.flex.justify-between.items-center.px-8
+    li
+      = link_to root_path, class: controller_name == 'home' ? 'text-white' : 'text-gray-400' do
+        = icon(:fire, controller_name == 'home' ? :solid : :outline)
+    li
+      = link_to '#', class: controller_name == '#' ? 'text-white' : 'text-gray-400' do
+        = icon(:dots_horizontal, controller_name == '#' ? :solid : :outline)

@@ -1,0 +1,17 @@
+@import 'typography';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import 'components/index';
+
+@layer base {
+  body {
+    text-rendering: optimizelegibility;
+  }
+
+  .logo {
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 3rem;
+  }
+}

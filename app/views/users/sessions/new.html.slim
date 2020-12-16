@@ -1,0 +1,37 @@
+.bg-gray-800.px-8.py-4.rounded
+  h2.text-center.text-2xl.text-white.mb-8.font-semibold  = t('.title')
+
+  = form_with model: resource,
+              as: resource_name,
+              class: 'mb-4',
+              url: session_path(resource_name) do |form|
+    = form.container_for :email, class: 'field mt-2' do
+      = form.label :email
+      = form.email_field :email, autofocus: true, autocomplete: "email"
+
+    = form.container_for :email, class: 'field mt-2' do
+      = form.label :password
+      = form.password_field :password, autocomplete: "current-password"
+
+    - if devise_mapping.rememberable?
+      = form.container_for :remember_me, class: 'field mt-2' do
+
+        = form.check_box :remember_me
+        = form.label :remember_me do
+          .flex.items-center
+            .checked-icon
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+            .unchecked-icon
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            .ml-1 = t('activerecord.attributes.user.remember_me')
+
+
+    = form.button class: 'cta mt-8' do
+      = t('.sign_in')
+
+  p.text-sm.text-gray-400
+    = t('users.links.need_an_account')
+    =< link_to t('users.links.sign_up'),
+            new_user_registration_path,
+            class: 'text-pink-700 font-semibold'
