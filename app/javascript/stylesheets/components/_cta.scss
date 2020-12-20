@@ -1,6 +1,6 @@
 .cta {
   @apply bg-pink-600 hover:bg-pink-700 active:bg-pink-800 disabled:opacity-50;
-  @apply text-white text-base font-semibold;
+  @apply text-white text-base font-semibold cursor-pointer;
   @apply block w-full py-3;
   @apply rounded transition-colors;
 }

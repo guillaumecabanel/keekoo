@@ -3,3 +3,6 @@ fr:
     wait_for_confirmation:
       title: Une dernière étape
       check_your_mailbox: Consultez votre boite électronique et confirmez votre email.
+  user_settings:
+    show:
+      title: Paramètres

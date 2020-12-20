@@ -15,5 +15,12 @@ html
 
   body
     .h-screen.bg-gray-800
-      == yield
-      = render 'shared/menu'
+      header.bg-gray-900.px-4.py-2.flex.items-center.justify-between
+        h1.text-white.capitalize.text-xl.font-semibold = t("#{controller_name}.#{action_name}.title")
+        == yield :header_action
+
+      .mx-auto class="sm:w-96"
+        == yield
+
+      footer
+        = render 'shared/menu'

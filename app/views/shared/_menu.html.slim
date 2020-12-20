@@ -2,7 +2,7 @@
   ul.h-full.flex.justify-between.items-center.px-8
     li
       = link_to root_path, class: controller_name == 'home' ? 'text-white' : 'text-gray-400' do
-        = icon(:fire, controller_name == 'home' ? :solid : :outline)
+        = inline_svg_tag("heroicons/view-grid-#{controller_name == 'home' ? :solid : :outline}.svg")
     li
-      = link_to '#', class: controller_name == '#' ? 'text-white' : 'text-gray-400' do
-        = icon(:dots_horizontal, controller_name == '#' ? :solid : :outline)
+      = link_to user_settings_path, class: controller_name == 'user_settings' ? 'text-white' : 'text-gray-400' do
+        = inline_svg_tag("heroicons/dots-horizontal-#{controller_name == 'user_settings' ? :solid : :outline}.svg")

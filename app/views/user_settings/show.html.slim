@@ -1,0 +1,6 @@
+= content_for(:header_action) do
+  = link_to destroy_user_session_path, method: :delete do
+    .text-gray-500 = inline_svg_tag("heroicons/logout-outline")
+
+.container.mx-auto.px-2
+  .text-white = current_user.email

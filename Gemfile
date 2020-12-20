@@ -36,6 +36,9 @@ gem 'optimism'
 gem 'devise'
 gem 'devise-i18n'
 
+# Adds Rails helper methods inline_svg_tag and inline_svg_pack_tag
+gem 'inline_svg'
+
 # Detect the users preferred language
 gem 'http_accept_language'
 

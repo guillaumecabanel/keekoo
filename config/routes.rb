@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   }
 
   get :wait_for_confirmation, to: 'pages#wait_for_confirmation'
+
+  resource :user_settings
 end
