@@ -2,5 +2,6 @@
   = link_to destroy_user_session_path, method: :delete do
     .text-gray-500 = inline_svg_tag("heroicons/logout-outline")
 
-.container.mx-auto.px-2
-  .text-white = current_user.email
+
+h3.text-lg.text-white.capitalize.font-semibold = current_user.nickname
+.text-gray-300 = current_user.email
