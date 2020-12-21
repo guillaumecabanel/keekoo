@@ -4,17 +4,17 @@ h2.text-center.text-2xl.text-white.mb-8.font-semibold = t('.sign_up')
             as: resource_name,
             class: 'mb-4',
             url: registration_path(resource_name) do |form|
-  = form.container_for :email, class: 'field mt-2' do
+  = form.container_for :email, class: 'field mt-2 mb-4' do
     = form.label :email
     = form.email_field :email, autofocus: true, autocomplete: "email"
     = form.error_for :email, class: 'mt-1 text-red-600 text-sm font-semibold'
 
-  = form.container_for :nickname, class: 'field mt-2' do
+  = form.container_for :nickname, class: 'field mt-2 mb-4' do
     = form.label :nickname
     = form.text_field :nickname
     = form.error_for :nickname, class: 'mt-1 text-red-600 text-sm font-semibold'
 
-  = form.container_for :password, class: 'field mt-2' do
+  = form.container_for :password, class: 'field mt-2 mb-4' do
     = form.label :password
     = form.password_field :password, autocomplete: "new-password"
     = form.error_for :password, class: 'mt-1 text-red-600 text-sm font-semibold'

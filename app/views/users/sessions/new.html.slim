@@ -4,16 +4,16 @@ h2.text-center.text-2xl.text-white.mb-8.font-semibold  = t('.title')
             as: resource_name,
             class: 'mb-4',
             url: session_path(resource_name) do |form|
-  = form.container_for :email, class: 'field mt-2' do
+  = form.container_for :email, class: 'field mt-2 mb-4' do
     = form.label :email
     = form.email_field :email, autofocus: true, autocomplete: "email"
 
-  = form.container_for :email, class: 'field mt-2' do
+  = form.container_for :email, class: 'field mt-2 mb-4' do
     = form.label :password
     = form.password_field :password, autocomplete: "current-password"
 
   - if devise_mapping.rememberable?
-    = form.container_for :remember_me, class: 'field mt-2' do
+    = form.container_for :remember_me, class: 'field mt-2 mb-4' do
 
       = form.check_box :remember_me
       = form.label :remember_me do
