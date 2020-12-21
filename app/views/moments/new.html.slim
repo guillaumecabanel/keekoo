@@ -5,7 +5,7 @@
 
   = form.container_for :picture, class: 'field mt-2 mb-4' do
     = form.label :picture
-    = form.file_field :picture
+    = form.file_field :picture, multiple: false
 
   = form.button class: 'cta mt-8' do
     = t('.add')

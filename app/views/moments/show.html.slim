@@ -6,7 +6,8 @@
 
 .flex.flex-col.justify-between
   .overflow-y-auto style='height: calc(100vh - 3.5rem - 2.75rem - 3rem - .5rem)'
-    = image_tag @moment.picture.variant(resize_to_fit: [400, 400]), class: 'mx-auto'
+    .bg-black
+      = image_tag @moment.picture.variant(resize_to_fit: [400, 400]), class: 'mx-auto'
 
     - @moment.comments.each do |comment|
       .m-4

@@ -2,7 +2,7 @@ class MomentsController < ApplicationController
   before_action :set_tribe, only: [:index, :show, :new, :create]
 
   def index
-    @moments = @tribe.moments
+    @moments = @tribe.moments.with_attached_picture.order(created_at: :desc)
   end
 
   def show
