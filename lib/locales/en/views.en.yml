@@ -6,3 +6,6 @@ en:
   user_settings:
     show:
       title: Settings
+  tribes:
+    index:
+      title: My tribes

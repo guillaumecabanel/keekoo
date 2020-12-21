@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   include HttpAcceptLanguage::AutoLocale
   before_action :set_action_cable_identifier
+  before_action :authenticate_user!
 
   private
 

@@ -6,3 +6,6 @@ fr:
   user_settings:
     show:
       title: Paramètres
+  tribes:
+    index:
+      title: Mes tributs

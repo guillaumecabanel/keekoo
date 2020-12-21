@@ -1,0 +1,13 @@
+= content_for(:header_title) do
+  = t('.title')
+
+= content_for(:header_action) do
+  = link_to destroy_user_session_path, method: :delete do
+    .text-gray-300 = inline_svg_tag("heroicons/plus-circle-outline.svg")
+
+ul
+  - @tribes.each do |tribe|
+    li.px-2.py-3.border-b.border-gray-600
+      = link_to tribe_moments_path(tribe), class: 'flex items-center justify-between' do
+        h3.text-gray-100.text-xl.font-semibold = tribe.title
+        .text-gray-300= inline_svg_tag("heroicons/chevron-right-solid.svg")
