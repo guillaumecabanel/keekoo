@@ -5,5 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   has_many :tribes, dependent: :destroy
+  has_many :moments
+  has_many :comments
+
   validates :nickname, presence: true
 end

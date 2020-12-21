@@ -1,0 +1,11 @@
+= content_for(:header_title) do
+  = @tribe.title
+
+= content_for(:header_action) do
+  = link_to new_tribe_moment_path do
+    .text-gray-300 = inline_svg_tag("heroicons/view-grid-add-outline")
+
+.grid.grid-cols-2.gap-1
+  - @moments.each do |moment|
+    = link_to tribe_moment_path(@tribe, moment) do
+      = image_tag moment.picture.variant(resize_to_fill: [256, 256])

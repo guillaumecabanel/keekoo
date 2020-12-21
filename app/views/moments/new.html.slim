@@ -1,0 +1,11 @@
+= content_for(:header_title) do
+  = @tribe.title
+
+= form_with model: [@tribe, @moment], class: 'mb-4' do |form|
+
+  = form.container_for :picture, class: 'field mt-2 mb-4' do
+    = form.label :picture
+    = form.file_field :picture
+
+  = form.button class: 'cta mt-8' do
+    = t('.add')

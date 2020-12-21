@@ -9,3 +9,6 @@ en:
   tribes:
     index:
       title: My tribes
+  moments:
+    show:
+      type_a_comment: Type a comment

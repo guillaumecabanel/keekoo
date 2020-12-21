@@ -1,8 +1,8 @@
-.fixed.bottom-0.bg-black.h-16.w-full
+.bg-black.h-14.w-full
   ul.h-full.flex.justify-between.items-center.px-8
     li
-      = link_to root_path, class: controller_name == 'home' ? 'text-white' : 'text-gray-400' do
-        = inline_svg_tag("heroicons/view-grid-#{controller_name == 'home' ? :solid : :outline}.svg")
+      = link_to root_path, class: controller_name == 'tribes' ? 'text-white' : 'text-gray-400' do
+        = inline_svg_tag("heroicons/collection-#{controller_name == 'tribes' ? :solid : :outline}.svg")
     li
       = link_to user_settings_path, class: controller_name == 'user_settings' ? 'text-white' : 'text-gray-400' do
         = inline_svg_tag("heroicons/dots-horizontal-#{controller_name == 'user_settings' ? :solid : :outline}.svg")

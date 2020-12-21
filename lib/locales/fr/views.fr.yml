@@ -9,3 +9,6 @@ fr:
   tribes:
     index:
       title: Mes tributs
+  moments:
+    show:
+      type_a_comment: Ajouter un commentaire

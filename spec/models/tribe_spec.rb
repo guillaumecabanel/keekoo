@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe Tribe, type: :model do
   describe 'associations' do
     it { should belong_to(:user) }
+    it { should have_many(:moments) }
   end
 
   describe 'validations' do

@@ -1,0 +1,24 @@
+= content_for(:header_title) do
+  .flex.items-center
+    = link_to tribe_moments_path(@tribe) do
+      .text-gray-300 = inline_svg_tag("heroicons/chevron-left-outline.svg")
+    .ml-2 = @tribe.title
+
+.flex.flex-col.justify-between
+  .overflow-y-auto style='height: calc(100vh - 3.5rem - 2.75rem - 3rem - .5rem)'
+    = image_tag @moment.picture.variant(resize_to_fit: [400, 400]), class: 'mx-auto'
+
+    - @moment.comments.each do |comment|
+      .m-4
+        .bg-gray-900.px-2.py-1.rounded-md.inline-block
+          .text-gray-400.uppercase.text-xs = comment.user.nickname
+          .text-white = comment.content
+
+  .h-12.bg-gray-800
+    = form_with model: [@moment, @comment] do |form|
+      .flex.items-baseline.justify-between.ml-2
+        = form.container_for :content, class: 'field w-full' do
+          = form.text_field :content, placeholder: t('.type_a_comment')
+
+        = form.button class: 'text-pink-600' do
+          = inline_svg_tag("heroicons/play-solid.svg", class: 'h-10')
