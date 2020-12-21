@@ -3,7 +3,7 @@
 
 = content_for(:header_action) do
   = link_to new_tribe_moment_path do
-    .text-gray-300 = inline_svg_tag("heroicons/view-grid-add-outline")
+    .text-gray-300 = inline_svg_tag('heroicons/view-grid-add-outline')
 
 .grid.grid-cols-2.gap-1
   - @moments.each do |moment|

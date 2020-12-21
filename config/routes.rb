@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get :wait_for_confirmation, to: 'pages#wait_for_confirmation'
 
   resource :user_settings, only: :show
-  resources :tribes, only: [:index, :show] do
+  resources :tribes, only: [:index, :show, :new, :create] do
     resources :moments, only: [:index, :new, :create, :show]
   end
 

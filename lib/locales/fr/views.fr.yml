@@ -8,7 +8,13 @@ fr:
       title: Paramètres
   tribes:
     index:
-      title: Mes tributs
+      title: Mes tribus
+      no_tribes_yet: Pas encore de tribu
+      create_a_tribe: Créer une tribu
+    new:
+      title: Nouvelle tribu
+      choose_a_title: Choisisser un nom
+      create_this_tribe: Créer cette tribu
   moments:
     show:
       type_a_comment: Ajouter un commentaire

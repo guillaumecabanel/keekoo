@@ -9,6 +9,12 @@ en:
   tribes:
     index:
       title: My tribes
+      no_tribes_yet: No tribes yet
+      create_a_tribe: Create a tribe
+    new:
+      title: New tribe
+      choose_a_title: Choose a title
+      create_this_tribe: Create this tribe
   moments:
     show:
       type_a_comment: Type a comment

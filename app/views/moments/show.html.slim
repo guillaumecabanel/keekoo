@@ -1,7 +1,7 @@
 = content_for(:header_title) do
   .flex.items-center
     = link_to tribe_moments_path(@tribe) do
-      .text-gray-300 = inline_svg_tag("heroicons/chevron-left-outline.svg")
+      .text-gray-300 = inline_svg_tag('heroicons/chevron-left-outline.svg')
     .ml-2 = @tribe.title
 
 .flex.flex-col.justify-between
@@ -22,4 +22,4 @@
           = form.text_field :content, placeholder: t('.type_a_comment')
 
         = form.button class: 'text-pink-600' do
-          = inline_svg_tag("heroicons/play-solid.svg", class: 'h-10')
+          = inline_svg_tag('heroicons/play-solid.svg', class: 'h-10')
