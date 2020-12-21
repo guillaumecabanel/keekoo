@@ -1,5 +1,8 @@
 = content_for(:header_title) do
-  = t('.title')
+  .flex.items-center
+    = link_to tribes_path do
+      .text-gray-300 = inline_svg_tag('heroicons/chevron-left-outline.svg')
+    .ml-2 = t('.title')
 
 .flex.justify-center.mt-8.px-4
   = inline_svg_tag('summer_landscape.svg')

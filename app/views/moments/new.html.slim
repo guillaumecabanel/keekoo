@@ -1,11 +1,18 @@
 = content_for(:header_title) do
-  = @tribe.title
+  .flex.items-center
+    = link_to tribe_moments_path(@tribe) do
+      .text-gray-300 = inline_svg_tag('heroicons/chevron-left-outline.svg')
+    .ml-2 = @tribe.title
 
-= form_with model: [@tribe, @moment], class: 'mb-4' do |form|
+.flex.justify-center.mt-8.px-4
+  = inline_svg_tag('summer_landscape.svg')
 
-  = form.container_for :picture, class: 'field mt-2 mb-4' do
-    = form.label :picture
-    = form.file_field :picture, multiple: false
+.px-4
+  = form_with model: [@tribe, @moment], class: 'mb-4' do |form|
+    = form.container_for :picture, class: 'field mt-2 mb-4' do
+      = form.label      :picture
+      = form.file_field :picture, multiple: false, accept: 'image/*'
+      = form.error_for  :picture, class: 'mt-1 text-red-600 text-sm font-semibold'
 
-  = form.button class: 'cta mt-8' do
-    = t('.add')
+    = form.button class: 'cta mt-8' do
+      = t('.add_this_moment')

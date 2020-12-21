@@ -16,5 +16,10 @@ fr:
       choose_a_title: Choisisser un nom
       create_this_tribe: Créer cette tribu
   moments:
+    index:
+      no_moments_yet: Pas encore de moments partagés ici
+      add_the_first_moment_for: "Ajouter le premier moment pour %{tribe}"
     show:
       type_a_comment: Ajouter un commentaire
+    new:
+      add_this_moment: Ajouter ce moment

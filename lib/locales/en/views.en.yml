@@ -16,5 +16,10 @@ en:
       choose_a_title: Choose a title
       create_this_tribe: Create this tribe
   moments:
+    index:
+      no_moments_yet: No moments yet
+      add_the_first_moment_for: "Add the first moment for %{tribe}"
     show:
       type_a_comment: Type a comment
+    new:
+      add_this_moment: Add this moment
