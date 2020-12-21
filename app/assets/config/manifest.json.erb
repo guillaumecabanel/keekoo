@@ -3,6 +3,7 @@
   "name": "Buzoku",
   "description": "Share moments",
   "display": "fullscreen",
+  "start_url": "/",
   "icons": [
     <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
     <% files.each_with_index do |file, index| %>

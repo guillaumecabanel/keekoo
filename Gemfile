@@ -32,6 +32,9 @@ gem 'view_component'
 # Use Optimism for realtime remote form validation
 gem 'optimism'
 
+# Turn Rails app into a Progressive Web App
+gem 'serviceworker-rails'
+
 # Use Devise as authentication solution
 gem 'devise'
 gem 'devise-i18n'
