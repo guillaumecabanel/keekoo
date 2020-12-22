@@ -4,7 +4,8 @@ class TribesController < ApplicationController
   end
 
   def show
-    @tribe = current_user.tribes.find(params[:id])
+    @tribe  = current_user.tribes.find(params[:id])
+    @moment = Moment.new
   end
 
   def new

@@ -3,15 +3,12 @@ class MomentsController < ApplicationController
 
   def index
     @moments = @tribe.moments.with_attached_picture.order(created_at: :desc)
+    @moment = Moment.new
   end
 
   def show
     @moment  = @tribe.moments.find(params[:id])
     @comment = Comment.new
-  end
-
-  def new
-    @moment = Moment.new
   end
 
   def create

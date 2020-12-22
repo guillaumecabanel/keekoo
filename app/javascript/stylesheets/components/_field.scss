@@ -11,8 +11,16 @@
     @apply text-gray-50;
   }
 
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="file"] {
     display: none;
+  }
+
+  label.file-field-label {
+    @apply block text-base w-full rounded p-2 mb-0;
+    @apply bg-gray-900 focus:bg-gray-800;
+    @apply border border-black focus:border-pink-600;
+    @apply text-gray-50;
+    @apply font-semibold normal-case;
   }
 
   input[type="checkbox"] + label {

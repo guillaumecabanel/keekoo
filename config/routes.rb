@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   resource :user_settings, only: :show
   resources :tribes, only: [:index, :show, :new, :create] do
-    resources :moments, only: [:index, :new, :create, :show]
+    resources :moments, only: [:index, :create, :show]
   end
 
   resources :moments, only: [] do

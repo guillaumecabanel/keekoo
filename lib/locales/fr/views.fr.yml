@@ -19,7 +19,6 @@ fr:
     index:
       no_moments_yet: Pas encore de moments partagés ici
       add_the_first_moment_for: "Ajouter le premier moment pour %{tribe}"
+      add_a_moment: Ajouter un moment
     show:
       type_a_comment: Ajouter un commentaire
-    new:
-      add_this_moment: Ajouter ce moment
