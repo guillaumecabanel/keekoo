@@ -13,8 +13,6 @@
         = inline_svg_tag('camera.svg')
 
       h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.no_moments_yet')
-      .px-4
-        = link_to t('.add_the_first_moment_for', tribe: @tribe.title), new_tribe_moment_path, class: 'text-center cta'
 
   .h-12.bg-gray-800
     = form_with model: [@tribe, @moment] do |form|
