@@ -1,11 +1,10 @@
 class TribesController < ApplicationController
   def index
-    @tribes = current_user.tribes
+    @tribes = current_user.joined_tribes
   end
 
   def show
-    @tribe  = current_user.tribes.find(params[:id])
-    @moment = Moment.new
+    @tribe = current_user.joined_tribes.find(params[:id])
   end
 
   def new

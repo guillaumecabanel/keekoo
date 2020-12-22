@@ -1,6 +1,10 @@
 = content_for(:header_title) do
   = @tribe.title
 
+= content_for(:header_action) do
+  = link_to tribe_path(@tribe) do
+    .text-gray-300 = inline_svg_tag('heroicons/dots-vertical-outline.svg')
+
 .flex.flex-col.justify-between
   .overflow-y-auto.mb-2 style='height: calc(100vh - 3.5rem - 2.75rem - 3rem - .5rem - .5rem)'
     - if @moments.any?

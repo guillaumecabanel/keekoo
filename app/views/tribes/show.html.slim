@@ -1,2 +1,14 @@
 = content_for(:header_title) do
   = @tribe.title
+
+.flex.justify-center.mt-8.px-4
+  = inline_svg_tag('world_wide_web.svg')
+
+h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.invite_people_to', tribe: @tribe.title)
+
+.px-4
+  .text-center.text-gray-400.text-sm.mb-1 = t('.send_a_tribe_invite_link_to_a_friend')
+  .field.mb-3
+    = url_field_tag 'link', m_url(invite: @tribe.uuid), disabled: true, class: 'font-semibold', style: 'font-size: 0.875rem'
+  .share-button
+    = button_tag t('.share_link'), type: 'button', class: 'text-center cta'

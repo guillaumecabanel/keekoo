@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :moments, only: [] do
     resources :comments, only: [:create]
   end
+
+  resources :memberships, only: [:create]
+  get :m, to: 'memberships#new'
 end

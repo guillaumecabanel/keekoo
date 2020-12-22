@@ -15,10 +15,17 @@ fr:
       title: Nouvelle tribu
       choose_a_title: Choisisser un nom
       create_this_tribe: Créer cette tribu
+    show:
+      invite_people_to: "Inviter des gens à la tribu %{tribe}"
+      share_link: Partager le lien
+      send_a_tribe_invite_link_to_a_friend: Envoyer un lien d'invitation à des amis
   moments:
     index:
       no_moments_yet: Pas encore de moments partagés ici
-      add_the_first_moment_for: "Ajouter le premier moment pour %{tribe}"
       add_a_moment: Ajouter un moment
     show:
       type_a_comment: Ajouter un commentaire
+  memberships:
+    new:
+      join_tribe: "Rejoindre la tribu %{tribe}"
+      join_tribe_question: "Rejoindre la tribu %{tribe} ?"

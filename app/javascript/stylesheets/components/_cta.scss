@@ -4,3 +4,10 @@
   @apply block w-full py-3;
   @apply rounded transition-colors;
 }
+
+.cta-outline {
+  @apply border border-pink-600 hover:border-pink-700 active:border-pink-800 disabled:opacity-50;
+  @apply text-pink-600 text-base font-semibold cursor-pointer;
+  @apply block w-full py-3;
+  @apply rounded transition-colors;
+}

@@ -7,6 +7,11 @@ class User < ApplicationRecord
   has_many :tribes, dependent: :destroy
   has_many :moments
   has_many :comments
+  has_many :memberships
 
   validates :nickname, presence: true
+
+  def joined_tribes
+    Tribe.includes(:memberships).where(memberships: { user_id: id })
+  end
 end

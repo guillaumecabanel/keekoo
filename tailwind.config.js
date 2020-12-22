@@ -16,7 +16,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['active', 'focus'],
-      borderColor: ['focus'],
+      borderColor: ['active', 'focus'],
       opacity: ['disabled'],
     },
   },

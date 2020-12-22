@@ -29,7 +29,7 @@ class MomentsController < ApplicationController
   private
 
   def set_tribe
-    @tribe = current_user.tribes.find(params[:tribe_id])
+    @tribe = current_user.joined_tribes.find(params[:tribe_id])
   end
 
   def moment_params

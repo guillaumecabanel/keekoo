@@ -5,6 +5,7 @@ RSpec.describe User, type: :model do
     it { should have_many(:tribes) }
     it { should have_many(:moments) }
     it { should have_many(:comments) }
+    it { should have_many(:memberships) }
   end
 
   describe 'validations' do

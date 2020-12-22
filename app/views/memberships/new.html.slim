@@ -1,0 +1,17 @@
+= content_for(:header_title) do
+  = t('.join_tribe', tribe: @tribe.title)
+
+.flex.justify-center.mt-8.px-4
+  = inline_svg_tag('email.svg')
+
+h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.join_tribe_question', tribe: @tribe.title)
+
+.flex.justify-between.px-4
+  .w-full.mr-4
+    = link_to t('word_no'), root_path, class: 'cta-outline text-center'
+
+
+  = form_with model: @membership, class: 'w-full ml-4' do |form|
+    = form.hidden_field :invite, value: params[:invite]
+    = form.button class: 'cta' do
+      = t('word_yes')

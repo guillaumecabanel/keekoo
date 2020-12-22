@@ -4,6 +4,7 @@ RSpec.describe Tribe, type: :model do
   describe 'associations' do
     it { should belong_to(:user) }
     it { should have_many(:moments) }
+    it { should have_many(:memberships) }
   end
 
   describe 'validations' do
