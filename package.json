@@ -10,6 +10,7 @@
     "cable_ready": "^4.4.0-pre3",
     "stimulus": "^1.1.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "tippy.js": "^6.2.7",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

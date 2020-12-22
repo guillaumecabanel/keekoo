@@ -19,6 +19,9 @@ fr:
       invite_people_to: "Inviter des gens à la tribu %{tribe}"
       share_link: Partager le lien
       send_a_tribe_invite_link_to_a_friend: Envoyer un lien d'invitation à des amis
+      link_copied: Lien copié !
+      share_title: "Rejoindre la tribu %{tribe} sur Keekoo"
+      share_text: "Rejoindre la tribu %{tribe} sur Keekoo"
   moments:
     index:
       no_moments_yet: Pas encore de moments partagés ici

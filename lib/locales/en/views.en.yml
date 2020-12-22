@@ -19,6 +19,9 @@ en:
       invite_people_to: "Invite people to the tribe %{tribe}"
       share_link: Share link
       send_a_tribe_invite_link_to_a_friend: Send a tribe invite link to a friend
+      link_copied: Link copied!
+      share_title: "Join the tribe %{tribe} on Keekoo"
+      share_text: "Join the tribe %{tribe} on Keekoo"
   moments:
     index:
       no_moments_yet: No moments yet
