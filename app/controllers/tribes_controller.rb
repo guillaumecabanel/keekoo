@@ -16,7 +16,7 @@ class TribesController < ApplicationController
     @tribe.user = current_user
 
     if @tribe.save
-      redirect_to tribe_moments_path(@tribe)
+      redirect_to tribe_path(@tribe)
     else
       respond_to do |format|
         format.html { broadcast_errors @tribe, tribe_params }

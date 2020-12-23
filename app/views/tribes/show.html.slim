@@ -1,26 +1,29 @@
 = content_for(:header_title) do
-  = @tribe.title
+  .flex.items-center
+    = link_to tribe_moments_path(@tribe) do
+      .text-gray-300 = inline_svg_tag('heroicons/chevron-left-outline.svg')
+    .ml-2 = @tribe.title
 
-.flex.justify-center.mt-8.px-4
-  = inline_svg_tag('world_wide_web.svg')
+.container.mx-auto.mt-8.max-w-screen-sm
+  .px-4 = inline_svg_tag('world_wide_web.svg')
 
-h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.invite_people_to', tribe: @tribe.title)
+  h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.invite_people_to', tribe: @tribe.title)
 
-.px-4
-  .text-center.text-gray-400.text-sm.mb-1 = t('.send_a_tribe_invite_link_to_a_friend')
+  .px-1
+    .text-center.text-gray-400.text-sm.mb-1 = t('.send_a_tribe_invite_link_to_a_friend')
 
-  div data-controller="clipboard"
-    .field.mb-3
-      .flex.items-center
-        = url_field_tag 'link',
-                        m_url(invite: @tribe.uuid),
-                        class: 'font-semibold',
-                        style: 'font-size: 0.75rem',
-                        data: { clipboard_target: 'source',
-                                on_copy_message: t('.link_copied'),
-                                share_title: t('.share_title', tribe: @tribe.title),
-                                share_text: t('.share_text', tribe: @tribe.title) }
-        = button_tag type: 'button', class: 'ml-1', data: { action: 'clipboard#copy' } do
-          = inline_svg_tag('heroicons/clipboard-copy-outline.svg', class: 'h-6 text-gray-300')
-    .share-button
-      = button_tag t('.share_link'), type: 'button', class: 'text-center cta', data: { action: 'clipboard#share' }
+    div data-controller="clipboard"
+      .field.mb-3
+        .flex.items-center
+          = url_field_tag 'link',
+                          m_url(invite: @tribe.uuid),
+                          class: 'font-semibold',
+                          style: 'font-size: 0.75rem',
+                          data: { clipboard_target: 'source',
+                                  on_copy_message: t('.link_copied'),
+                                  share_title: t('.share_title', tribe: @tribe.title),
+                                  share_text: t('.share_text', tribe: @tribe.title) }
+          = button_tag type: 'button', class: 'ml-1', data: { action: 'clipboard#copy' } do
+            = inline_svg_tag('heroicons/clipboard-copy-outline.svg', class: 'h-6 text-gray-300')
+      .share-button
+        = button_tag t('.share_link'), type: 'button', class: 'text-center cta', data: { action: 'clipboard#share' }

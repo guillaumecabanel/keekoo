@@ -4,16 +4,16 @@
       .text-gray-300 = inline_svg_tag('heroicons/chevron-left-outline.svg')
     .ml-2 = t('.title')
 
-.flex.justify-center.mt-8.px-4
-  = inline_svg_tag('summer_landscape.svg')
+.container.mx-auto.mt-8.max-w-screen-sm
+  .px-4 = inline_svg_tag('summer_landscape.svg')
 
-.px-4
-  = form_with model: [@tribe], class: 'mb-4' do |form|
+  .px-1
+    = form_with model: [@tribe], class: 'mb-4' do |form|
 
-    = form.container_for :title, class: 'field mt-2 mb-4' do
-      = form.label      :title
-      = form.text_field :title, autofocus: true, placeholder: t('.choose_a_title')
-      = form.error_for  :title, class: 'mt-1 text-red-600 text-sm font-semibold'
+      = form.container_for :title, class: 'field mt-2 mb-4' do
+        = form.label      :title
+        = form.text_field :title, autofocus: true, placeholder: t('.choose_a_title')
+        = form.error_for  :title, class: 'mt-1 text-red-600 text-sm font-semibold'
 
-    = form.button class: 'cta mt-8' do
-      = t('.create_this_tribe')
+      = form.button class: 'cta mt-8' do
+        = t('.create_this_tribe')
