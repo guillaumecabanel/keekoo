@@ -1,6 +1,6 @@
 class TribesController < ApplicationController
   def index
-    @tribes = current_user.joined_tribes
+    @tribes = current_user.joined_tribes.includes(:users, :moments).order(updated_at: :desc)
   end
 
   def show

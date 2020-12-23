@@ -3,6 +3,7 @@ class Tribe < ApplicationRecord
 
   has_many :moments
   has_many :memberships
+  has_many :users, through: :memberships
 
   validates :title, presence: true
   validates :title, uniqueness: { scope: :user_id, case_sensitive: false }

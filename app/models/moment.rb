@@ -1,6 +1,6 @@
 class Moment < ApplicationRecord
   belongs_to :user
-  belongs_to :tribe
+  belongs_to :tribe, touch: true
 
   has_many :comments
 

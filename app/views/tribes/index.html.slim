@@ -10,8 +10,13 @@
     - @tribes.each do |tribe|
       li.px-2.py-3.border-b.border-gray-600
         = link_to tribe_moments_path(tribe), class: 'flex items-center justify-between' do
-          h3.text-gray-100.text-xl.font-semibold = tribe.title
-          .text-gray-300 = inline_svg_tag('heroicons/chevron-right-solid.svg')
+          h3.text-gray-100.text-xl.font-semibold.truncate = tribe.title
+          .flex.items-center
+            .flex
+              - tribe.users.each do |user|
+                .bg-pink-800.text-white.font-semibold.rounded-full.w-7.h-7.flex.justify-center.items-center.mr-1
+                  = user.nickname[0]
+            .text-gray-300.ml-2 = inline_svg_tag('heroicons/chevron-right-solid.svg')
 
 - else
   .flex.justify-center.mt-8.px-4
