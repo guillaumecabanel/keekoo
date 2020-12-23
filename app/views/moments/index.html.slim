@@ -18,17 +18,14 @@
 
       h2.text-center.text-2lg.text-white.my-8.font-semibold = t('.no_moments_yet')
 
-  .h-12.bg-gray-800
-    = form_with model: [@tribe, @moment] do |form|
-      .flex.items-center.justify-between.ml-2
+  .h-12.bg-gray-800.px-4
+    = form_with model: [@tribe, @moment], data: { controller: 'form-autosubmit' } do |form|
+      .flex.items-center.justify-between
         = form.container_for :picture, class: 'field w-full' do
-          = form.label      :picture, class: 'file-field-label' do
+          = form.error_for :picture, class: 'mb-1 text-red-600 text-sm font-semibold'
+          = form.label     :picture, class: 'file-field-label' do
             .flex
-              = inline_svg_tag('heroicons/plus-solid.svg', class: 'h-6')
+              = inline_svg_tag('heroicons/plus-circle-solid.svg', class: 'h-6')
               = inline_svg_tag('heroicons/photograph-outline.svg', class: 'h-6')
               span.ml-1 = t('.add_moment')
-          = form.file_field :picture, multiple: false, accept: 'image/*'
-          = form.error_for  :picture, class: 'mt-1 text-red-600 text-sm font-semibold'
-
-        = form.button class: 'text-pink-600' do
-          = inline_svg_tag('heroicons/play-solid.svg', class: 'h-10')
+          = form.file_field :picture, multiple: false, accept: 'image/*', data: { action: "change->form-autosubmit#submit" }
